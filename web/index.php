@@ -1,17 +1,18 @@
 <?php
-require_once __DIR__.'/../vendor/autoload.php';
+// Define root of the application as a named constant
+define('APP_ROOT', __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR);
+
+require_once APP_ROOT.'vendor/autoload.php';
 
 $app = new Silex\Application();
-$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__.'/../config/config.yml'));
+$app->register(new DerAlex\Silex\YamlConfigServiceProvider(APP_ROOT.'config/config.yml'));
 
 // Initialize Twig
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../views',
-));
-
-// Initialize Doctrine
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => $app['config']['database']
+    'twig.path'    => APP_ROOT.'views',
+    'twig.options' => array(
+        'cache'        => APP_ROOT.'cache/twig/',
+    ),
 ));
 
 // Set debug to true if viewing locally

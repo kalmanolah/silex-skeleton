@@ -9,3 +9,6 @@ vendor/
 
 # edited configuration file
 config/config.yml
+
+# cache folder
+cache/

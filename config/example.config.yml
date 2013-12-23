@@ -3,12 +3,3 @@ site:
     description:    A sample application created using the Silex microframework.
     author:         Kalman Olah
     keywords:       just, a, few, tags, for, my, beloved, web, crawlers
-
-database:
-    driver:         pdo_mysql
-    host:           localhost
-    port:           3306
-    dbname:         database
-    user:           dbuser
-    password:       password
-    charset:        utf8

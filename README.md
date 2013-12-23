@@ -6,7 +6,7 @@ This is a [Silex](http://silex.sensiolabs.org/) skeleton application I'm using a
 A few of the things it includes:
 
 - A simple, working [controller](web/index.php) / [.htacces](web/.htaccess) combo
-- Twig and Doctrine, ready to be used
+- Twig, ready to be used
 - Easy configuration through the use of [/config/example.config.yml](config/example.config.yml)
 - A HTML5 base Twig template ready to be extended, with blocks you can override
 - jQuery, FontAwesome and Twitter Bootstrap
